@@ -3,7 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Apple News-->
@@ -36,7 +38,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passbook is a simplest way to store users passes in one place..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzO-RT-QPR">
-                                                    <rect key="frame" x="8" y="44" width="304" height="27"/>
+                                                    <rect key="frame" x="8" y="44" width="278" height="27"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -54,14 +56,24 @@
                                                         <constraint firstAttribute="height" constant="4" id="Y8A-NC-27e"/>
                                                     </constraints>
                                                 </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellArrowImage" translatesAutoresizingMaskIntoConstraints="NO" id="VQ0-uq-q7J">
+                                                    <rect key="frame" x="286" y="45" width="26" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="26" id="7WZ-JV-Xdl"/>
+                                                        <constraint firstAttribute="width" secondItem="VQ0-uq-q7J" secondAttribute="height" multiplier="1:1" id="XRX-Tr-aOO"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="lMa-oe-X3R" firstAttribute="top" secondItem="CoH-pu-pEZ" secondAttribute="topMargin" id="4UF-PS-Sno"/>
                                                 <constraint firstItem="dHV-Gp-yz2" firstAttribute="top" secondItem="CFN-fa-fpf" secondAttribute="bottom" constant="6" id="4yP-wS-fM2"/>
+                                                <constraint firstItem="VQ0-uq-q7J" firstAttribute="trailing" secondItem="CoH-pu-pEZ" secondAttribute="trailingMargin" id="9ch-cA-zd5"/>
+                                                <constraint firstItem="VQ0-uq-q7J" firstAttribute="centerY" secondItem="CoH-pu-pEZ" secondAttribute="centerY" id="A8P-TO-anG"/>
                                                 <constraint firstItem="lMa-oe-X3R" firstAttribute="leading" secondItem="CoH-pu-pEZ" secondAttribute="leadingMargin" id="EFP-Yu-phi"/>
                                                 <constraint firstItem="UzO-RT-QPR" firstAttribute="top" secondItem="lMa-oe-X3R" secondAttribute="bottom" id="IGF-h6-9Nt"/>
                                                 <constraint firstAttribute="bottom" secondItem="CFN-fa-fpf" secondAttribute="bottom" constant="5" id="Nbg-20-lY2"/>
                                                 <constraint firstItem="lMa-oe-X3R" firstAttribute="trailing" secondItem="CoH-pu-pEZ" secondAttribute="trailingMargin" id="RLj-FE-mt4"/>
+                                                <constraint firstItem="VQ0-uq-q7J" firstAttribute="leading" secondItem="UzO-RT-QPR" secondAttribute="trailing" id="bJK-FY-it8"/>
                                                 <constraint firstAttribute="trailing" secondItem="CFN-fa-fpf" secondAttribute="trailing" constant="8" id="bYL-zu-fyi"/>
                                                 <constraint firstItem="dHV-Gp-yz2" firstAttribute="leading" secondItem="CoH-pu-pEZ" secondAttribute="leading" id="cYF-7H-F6T"/>
                                                 <constraint firstItem="UzO-RT-QPR" firstAttribute="leading" secondItem="CoH-pu-pEZ" secondAttribute="leadingMargin" id="iLb-nj-vjS"/>
@@ -69,10 +81,13 @@
                                                 <constraint firstItem="CFN-fa-fpf" firstAttribute="top" secondItem="UzO-RT-QPR" secondAttribute="bottom" constant="5" id="tz9-7q-P6j"/>
                                                 <constraint firstAttribute="bottom" secondItem="dHV-Gp-yz2" secondAttribute="bottom" id="vqa-i2-cuu"/>
                                                 <constraint firstAttribute="trailing" secondItem="dHV-Gp-yz2" secondAttribute="trailing" id="xfv-LT-d51"/>
+                                                <constraint firstItem="VQ0-uq-q7J" firstAttribute="height" secondItem="CoH-pu-pEZ" secondAttribute="height" multiplier="26:114" id="ycL-jE-RhA"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
+                                                    <exclude reference="jqm-VA-4eZ"/>
                                                     <exclude reference="Nbg-20-lY2"/>
+                                                    <exclude reference="ycL-jE-RhA"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -220,4 +235,7 @@
             <point key="canvasLocation" x="315" y="296"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cellArrowImage" width="64" height="64"/>
+    </resources>
 </document>
